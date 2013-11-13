@@ -1,6 +1,7 @@
 package frontend;
 
 import java.util.ArrayList;
+import java.util.Stack;
 import java.util.TreeMap;
 
 import intermediate.*;
@@ -15,7 +16,7 @@ public class Parser3
 	private Scanner scanner;
 	private TreeMap<String, SymtabEntry> symtab;
 	private ArrayList<Node> trees;
-	
+	private Stack<TreeMap<String, SymtabEntry>> symtabstack;
 	/**
 	 * Constructor.
 	 * @param scanner the simple Scheme scanner.
@@ -25,6 +26,9 @@ public class Parser3
 		this.scanner = scanner;
 		this.symtab = new TreeMap<String, SymtabEntry>();
 		this.trees = new ArrayList<Node>();
+		symtabstack = new Stack<TreeMap<String, SymtabEntry>>();
+		symtabstack.push(new TreeMap<String, SymtabEntry>());
+		symtab = symtabstack.peek();
 	}
 	/**
 	 * The parse method.

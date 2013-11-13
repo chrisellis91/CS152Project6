@@ -14,6 +14,7 @@ public class Parser2
 	private Scanner scanner;
 	private TreeMap<String, SymtabEntry> symtab;
 	
+	
 	/**
 	 * Constructor.
 	 * @param scanner the simple Scheme scanner.
