@@ -9,7 +9,7 @@ public class Schemer1
 		Parser1 parser = new Parser1(scanner);
 		parser.parse();
 		/**
-		 * added this comment as atest
+		 * also test
 		 */
 	}
 }
