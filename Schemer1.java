@@ -8,5 +8,8 @@ public class Schemer1
 		Scanner scanner = new Scanner(source);
 		Parser1 parser = new Parser1(scanner);
 		parser.parse();
+		/**
+		 * added this comment as atest
+		 */
 	}
 }
